@@ -22,6 +22,10 @@
         <after css:theme-children="html head"
                content="/html/head/link | /html/head/style | /html/head/meta" />
 
+        <after css:theme-children="html head">
+            <style>@import url(++theme++diazotheme.plonecom/static/carousel.css)</style>
+        </after>
+
         <!-- merge classes from Plone body with theme body -->
         <merge attributes="class" css:theme="body" css:content="body" />
 
