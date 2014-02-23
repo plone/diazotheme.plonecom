@@ -27,7 +27,7 @@ setup(name='diazotheme.plonecom',
       install_requires=[
           'setuptools',
           'z3c.jbot',
-          # -*- Extra requirements: -*-
+          'Products.Carousel',
       ],
       entry_points="""
       # -*- Entry points: -*-
