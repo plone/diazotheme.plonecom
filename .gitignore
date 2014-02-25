@@ -18,6 +18,7 @@
 .svn/
 .project
 .pydevproject
+.Python
 bin/
 build/
 develop-eggs/
@@ -27,7 +28,8 @@ fake-eggs/
 parts/
 dist/
 var/
-
+include/
+lib/
 
 
 # OSX
