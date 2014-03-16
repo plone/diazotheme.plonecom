@@ -29,6 +29,7 @@ setup(name='diazotheme.plonecom',
           'setuptools',
           'z3c.jbot',
           'Products.Carousel',
+          'plone.app.theming',
       ],
       entry_points="""
       # -*- Entry points: -*-

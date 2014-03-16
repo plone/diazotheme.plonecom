@@ -8,6 +8,7 @@
 
   <i18n:registerTranslations directory="locales" />
   <include package="plone.resource" file="meta.zcml"/>
+  <includeDependencies package="." />
 
   <genericsetup:registerProfile
       name="default"
@@ -18,7 +19,8 @@
       />
 
   <plone:static
-    directory="static"
+    name="diazotheme.plonecom"
+    directory="resources"
     type="theme"
     />
 
