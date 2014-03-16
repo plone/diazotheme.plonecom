@@ -3,6 +3,6 @@
   <version>1000</version>
   <dependencies>
       <dependency>profile-plone.app.theming:default</dependency>
-      <dependency>Products.Carousel:default</dependency>
+      <!--<dependency>Products.Carousel:default</dependency>-->
   </dependencies>
 </metadata>
