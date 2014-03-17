@@ -1,26 +1,37 @@
 <div i18n:domain="plone"
      id="portal-footer">
-          <p>
-               <span i18n:translate="description_copyright" tal:omit-tag="">
-               The
-               <span i18n:name="plonecms" tal:omit-tag="">
-                    <a href="http://plone.org" i18n:translate="label_plone_cms">Plone<sup>&reg;</sup> Open Source CMS/WCM</a>
-               </span>
-               is
-               <abbr title="Copyright" i18n:name="copyright" i18n:attributes="title title_copyright;">&copy;</abbr>
-               2000-<tal:year i18n:name="current_year" tal:content="view/year" />
-               by the
-               <span i18n:name="plonefoundation" tal:omit-tag="">
-                    <a href="http://plone.org/foundation" i18n:translate="label_plone_foundation">Plone Foundation</a></span>
-               and friends.
-               </span>
 
-               <span i18n:translate="description_license" tal:omit-tag="">
-               Distributed under the
-                    <span i18n:name="license" tal:omit-tag="">
-                         <a href="http://creativecommons.org/licenses/GPL/2.0/" i18n:translate="label_gnu_gpl_licence">GNU GPL license</a></span>.
-               </span>
-          </p>
-          <p>This footer may be updated by editing the plone.app.layout.viewlets.footer.pt template in your theme's "template_overrides" directory. Any Plone viewlet or skin template my be similarly overriden.</p>
+     <div id="portal-footer-bottom" class="row">
+             <div class="cell width-full position-0">
+                  <div class="centered">
+                         <div class="row">
+                                  <div class="cell width-1:4 position-0">
+                                      <img class="image-inline" src="/++theme++diazotheme.plonecom/static/plone_footer.png"></div>
+                                  <div class="cell width-1:2 position-1:4">
+                                      <ul>
+                                          <li>
+                                                <a href="contact-info">Contact us</a>
+                                          <li>
+                                          <li>
+                                                <a href="sitemap">Site Map</a>
+                                          </li>
+                                          <li>
+                                                <a href="accessibility-info">Accesibility</a>
+                                          </li>
+                                      </ul></div>
+                                  <div class="cell width-1:4 position-3:4">
+                                      <p>
+                                         <a href="http://twitter.com/plone">
+                                            <img class="image-inline" src="/++theme++diazotheme.plonecom/static/twitter.png">
+                                         </a>&nbsp;
+                                         <a href="http://lists.plone.org/mailman/listinfo">
+                                            <img class="image-inline" src="++theme++diazotheme.plonecom/static/mail.png">
+                                         </a>
+                                      </p>
+                                  </div>
+                         </div>
+                  </div>
+             </div>
+        </div>
 
 </div>
