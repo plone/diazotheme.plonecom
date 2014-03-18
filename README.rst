@@ -3,22 +3,12 @@ plone.com
 
 This is a Diazo theme for plone.com.
 
-Notes
------
+Strategy
+++++++++
 
-Strategy for homepage components
-++++++++++++++++++++++++++++++++
+ * new content type caled case study which will have all the fields necessary for a nice case study
+ * middle portlets are a content type called "Call to action". Still need to verify that this will work but should make it easier to maintain
+ * verticals are collections based on the verticals tag
+ * doormat is groups of collections, reflecting the top tabs as well, placed in content well portlets
 
-Products.Carousel should be pulled from the plone.com branch (github collective)
-
-collective.portlet.content
-to hook easy-to-main pages to portlets
-
-Homepage mid-section
-use left portlets (two)
-
-Homepage key features section
-use right portlets
-
-doormat will be auto based on sitemap
-
+Everything is private until its ready to go. Case studies and content will be coordinated at https://trello.com/b/XfONiDzy/plone-articles-and-press-releases
