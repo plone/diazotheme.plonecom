@@ -34,3 +34,5 @@ lib/
 
 # OSX
 .DS_Store
+
+src/Products.Carousel
