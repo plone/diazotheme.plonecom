@@ -1,0 +1,171 @@
+// Styles for the case study zoom
+.portaltype-case_study #above-portal-content {display: none;}
+
+
+.banner {
+	max-height: 275px;
+	clear: both;
+	position: relative;
+	   -moz-box-shadow:    inset 0 0 10px #333;
+	   -webkit-box-shadow: inset 0 0 10px #333;
+	   box-shadow:         inset 0 0 10px #333;
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	a {
+		@include bluerectbtn;
+		@include smallcapped(1.5px, 0.7em);
+		
+		position: absolute;
+		right: 10%;
+		bottom: 20%;
+
+		&:hover {
+			@include bluerectbtnhover;
+		}
+	}
+}
+
+// Hide extra stuff
+#formfield-form-widgets-jumbotron,
+#formfield-form-widgets-featured_technologies,
+#formfield-form-widgets-quote,
+#formfield-form-widgets-related_talks,
+#formfield-form-widgets-video_embed_code,
+#formfield-form-widgets-developed_by_picture,
+#formfield-form-widgets-developed_by,
+#formfield-form-widgets-IAddress-address,
+#formfield-form-widgets-developer_name,
+#formfield-form-widgets-IPhoneContactInfo-phone,
+#formfield-form-widgets-INetContactInfo-email {display: none;}
+
+.rightcol {
+
+	.video {margin-bottom: 1em;}
+	iframe {
+		max-width: 120%;
+		position: relative;
+		left: -20%;
+		border: 8px solid $plone-blue;
+	}
+
+	.portlet {
+		border: 1px solid $plone-blue;
+		margin: 5em 0 3em;
+		padding: 3% 2%;
+
+		h4 {
+			display: inline-block;
+			background: $plone-blue;
+			color: #fff;
+			padding: .25em 1em;
+			position: relative;
+			top: -3em;
+			margin-bottom: -2.5em;
+		}
+
+		li {
+			a {
+				display: block;
+				font-weight: 1.5em;
+			}
+		}
+	}
+
+	.gallery {
+		#content & ul {margin: 0}
+		#content & li {
+			margin: 2% 1%; 
+			display: inline-block; 
+			max-width: 30%;
+			list-style-type: none;
+
+			img {border: 2px solid $text;}
+		}
+	}
+
+	.tech, .talks {
+		#content & ul {
+			margin-left: 1em;
+		}
+		li {
+			list-style: none;
+			background: url(../img/icon-bullet.png) no-repeat 0px 0px;
+			padding-left: 25px;
+		}
+		li.addon {
+			background-image: url(../img/icon-addon.png);
+		}
+		li.theme {
+			background-image: url(../img/icon-pencil.png);
+		}
+		li.performance {
+			background-image: url(../img/icon-performance.png);
+		}
+	}
+
+}
+
+.developedby {
+	clear: both;
+	border-top: 1px solid #eaeaea;
+	padding-top: 2em;
+	margin-top: 2em;
+
+	h4.intro {
+		padding-left: 28px; 
+		background: transparent url(../img/icon-users.png) no-repeat left center;
+		margin-bottom: 1em;
+		color: $text;
+	}
+
+	#content & a.selfies {
+		width: 37.313432836%;
+		border: 4px solid $plone-blue;
+		border-bottom: 4px solid $plone-blue;
+		float: left;
+		margin-right: 2.611940299%;
+	}
+
+	.bio {
+		width: 32.328358209%;
+		float: left;
+		margin-right: 2.611940299%;
+
+		h4 {font-size: 2em; margin-top: 0;}
+
+		#content  & a {
+			@include bluerectbtn;
+			@include smallcapped(1.5px, 0.7em);
+			border-bottom: 0px;
+
+			&:hover {
+				@include bluerectbtnhover;
+			}
+		}
+	}
+
+	.contacts {
+		width: 16.925373134%;
+		float: right;
+
+		h5 {font-size: 1.25em; margin-top: 0.65em;}
+		span {display: block; line-height: 1.25em; padding: 0.25em 0 0.25em 20px;}
+	}
+
+}
+
+		span.email {
+			background: transparent url(../img/icon-mail.png) no-repeat left center; 			
+			font-size: 0.9em;
+		}
+		span.phone {
+			background: transparent url(../img/icon-phone.png) no-repeat left center; 
+			font-size: 0.9em;
+		}
+		span.address {
+			font-size: 0.9em;
+		}

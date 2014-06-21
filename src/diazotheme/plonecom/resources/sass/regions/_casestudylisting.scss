@@ -1,0 +1,29 @@
+// Case study listing 
+
+.section-case-studies.template-folder_summary_view {
+	h1.documentFirstHeading {font-size: 0.8em;}
+
+	.listing {
+		position: relative;
+		max-width: 784px;
+		max-height: 523px;
+
+		a.thumb {
+			position: absolute; 
+			top: 0;
+			left: 0;
+			z-index: 1;
+		}
+	}
+
+	.listingtext {
+		position: absolute; 
+		z-index: 100;
+		width: 60%;
+		background: #fff;
+		bottom: 0; right: 0;
+	}
+
+	.tileItem {clear: both;}
+
+}

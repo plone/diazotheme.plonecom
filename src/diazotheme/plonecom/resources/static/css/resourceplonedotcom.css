@@ -1,0 +1,39 @@
+
+/* - ++resource++plonedotcom.contenttypes/continuousslider.css - */
+@media screen {
+/* http://plone.rebelx.nl/portal_css/++resource++plonedotcom.contenttypes/continuousslider.css?original=1 */
+dl.portlet.portletContinuousSlider {
+margin: 0;
+}
+div.continuousslider-container {
+width: 100%;
+overflow:hidden;
+}
+div.continuousslider-item .continuousslider-image {
+background: #f3f3f3 url(++resource++plonedotcom.contenttypes/slider_bg.png) center top repeat-x;
+border-right: 1px solid #e2e2e2;
+}
+div.continuousslider-item .continuousslider-image img {
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+}
+
+}
+
+
+/* - ploneCustom.css - */
+@media all {
+/* http://plone.rebelx.nl/portal_css/ploneCustom.css?original=1 */
+/* */
+/* */
+/* */
+/* */
+/* */
+/* */
+
+}
+

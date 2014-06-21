@@ -1,0 +1,50 @@
+// Shared styles and dependencies
+// Globaly used variables, mixins, and functions
+
+
+// Metrics
+
+
+
+// Colors
+	// The UC Davis standard colors
+	$plone-blue:		#069fe4;
+	$plone-darkblue:	#00608c;
+	$text:				#191919;
+
+
+
+
+// Typography
+	$opensans:			'Open Sans', Helvetica, Arial, "Nimbus Sans L", FreeSans, sans-serif;
+	$sans-serif:		Helvetica Neue, Helvetica Std, Helvetica, Univers, Arial, sans-serif;
+	$serif:				Georgia, Berkeley, serif;
+
+	// [Compass] Vertical rhythm set up
+	// Change these values to whatever you want for your proj
+	// $base-font-size:				16px;
+	// $base-line-height:				24px;
+	// $default-rhythm-border-style:	solid;
+	// $relative-font-sizing:			true;
+
+
+
+// Themes
+	@mixin smallcapped($spacing: 1px, $size: inherit) {
+		text-transform: uppercase;
+		letter-spacing: $spacing;
+		font-size: $size;
+	}
+
+	@mixin bluerectbtn {
+		background: $plone-blue url(../img/icon-navright.png) right center no-repeat;
+		padding: 5px 25px 5px 10px;
+		font-weight: normal;
+		text-decoration: none;
+		color: #fff;
+	}
+
+	@mixin bluerectbtnhover {
+		border-bottom: 0px;
+		background-color: darken($plone-blue, 20%);
+	}

@@ -1,52 +1,75 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <rules
     xmlns="http://namespaces.plone.org/diazo"
     xmlns:css="http://namespaces.plone.org/diazo/css"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-    <!-- Apply the following rules to standard Plone pages -->
-    <rules css:if-content="#visual-portal-wrapper">
+    <!--Head-->
+    <copy css:content="html" css:theme="html" attributes="lang dir"/>
+<!--     <copy css:content="head base" css:theme="head base"/>
+ -->    <replace css:content="head title" css:theme="head title"/>
+    <before css:content="head style, head link, head script, head meta" css:theme-children="head"/>
 
-        <theme href="index.html" />
+    <theme href="casestudy.html" css:if-content=".portaltype-case_study" />
+    <theme href="index.html" css:if-content=".section-front-page" />
+    <theme href="content.html" css:if-content="#visual-portal-wrapper" />
 
-        <!-- Replace title with Plone's page title  -->
-        <replace css:theme="html head title" css:content="html head title" />
+    <merge attributes="class" css:content="body" css:theme="body" />
+    <copy attributes="id dir" css:content="body" css:theme="body" />
 
-        <!-- Drop the favicon spec coming from content; we'll use the one in the theme. -->
-        <drop content="/html/head/link[@rel='shortcut icon']" />
+    <copy css:content="#portal-logo" css:theme="#portal-header #portal-logo" />
+    <replace css:content="#portal-globalnav" css:theme="#portal-header .nav-primary ul" />
 
-        <!-- Copy base tag from Plone -->
-        <before css:theme-children="html head" css:content="html head base" />
+    <replace css:content="#portal-searchbox" css:theme="#portal-header .searchysearch" />
+    <!-- <strip css:content="#portal-searchbox" attribute="id" /> -->
+    <drop css:content=".searchSection" />
 
-        <!-- Copy link, style, meta tags from Plone head -->
-        <after css:theme-children="html head"
-               content="/html/head/link | /html/head/style | /html/head/meta" />
 
-        <after css:theme-children="html head">
-            <style>
-                @import url(++theme++diazotheme.plonecom/static/carousel.css);
-                @import url(++theme++diazotheme.plonecom/static/main.css);
-            </style>
-        </after>
+    <!-- Index -->
+    <replace css:content="#portal-column-content" css:theme=".diazo-index #portal-column-content" />
 
-        <!-- merge classes from Plone body with theme body -->
-        <merge attributes="class" css:theme="body" css:content="body" />
+<!--     <copy css:content="#portal-breadcrumbs" css:theme=".pathbar" />
+ -->    <!-- <strip css:content="#portal-breadcrumbs" attribute="id" /> -->
+    <drop css:content="#breadcrumbs-you-are-here" />
+    <replace css:content="#portal-column-content" css:theme=".diazo-content #portal-column-content" />
+    <replace css:content="#portal-column-one" css:theme=".diazo-content #portal-column-one" />
+    <replace css:content="#portal-column-two" css:theme=".diazo-content #portal-column-two" />
 
-        <!-- Copy script tags from Plone head to end of body -->
-        <after css:theme-children="html body" css:content="html head script" />
 
-        <!-- Move inline scripts in content to end of body -->
-        <drop css:content="body script" />
-        <after css:theme-children="html body" css:content="html body script" method="raw" />
+    <copy css:content="#viewlet-above-content" css:theme="#above-portal-content" />
+    <copy css:content="#portlets-above" css:theme="#portlets-above" />
 
-        <!-- Insert your own rules here -->
 
-        <!-- This rule pulls in the whole Plone layout. You'll typically replace this
-             with rules that copy particular parts of the content into particular
-             targets in your theme.
-         -->
-        <after css:theme="body p" css:content="#visual-portal-wrapper" />
+    <!-- styles for case studies -->
+    <copy css:content="#form-widgets-case_url a" css:theme=".banner a" attributes="href" />
 
-    </rules>
+    <copy css:content=".portaltype-case_study #content #form-widgets-case_study_text" css:theme=".maincol" />
+    <prepend css:content=".portaltype-case_study h1.documentFirstHeading" css:theme=".maincol" />
+    <prepend css:content=".portaltype-case_study div.documentDescription" css:theme=".maincol" />
+ 
+    <copy css:content="#form-widgets-quote" css:theme=".rightcol blockquote" />
+    <replace css:content="#form-widgets-featured_technologies ul" css:theme=".rightcol .tech ul" />
+    <replace css:content="#formfield-form-widgets-related_talks ul" css:theme=".rightcol .talks ul" />
+    <copy css:content="#form-widgets-video_embed p" css:theme=".rightcol .video" />
+    <replace css:content=".portaltype-case_study #folder-listing a.contenttype-image" css:theme=".rightcol .gallery li a" attributes="href" />
+
+    <replace css:content="#formfield-form-widgets-jumbotron > .named-image-widget.namedblobimage-field img" css:theme=".banner img" />
+    <replace css:content="#form-groups-author .named-image-widget.namedblobimage-field img" css:theme=".developedby .selfies img" />
+
+    <copy css:content="#form-widgets-developer_name" css:theme=".developedby .bio h4" />
+    <copy css:content="#form-widgets-developed_by" css:theme=".developedby .bio p" />
+    <copy css:content="#form-widgets-IAddress-address" css:theme=".developedby .contacts .address" />
+    <copy css:content="#form-widgets-INetContactInfo-email" css:theme=".developedby .contacts .email a" />
+
+
+    <!-- foooooter -->
+    <copy css:content="#portal-footer-wrapper" css:theme="#footer" />
+<!--     <copy css:content="#portal-footer-wrapper script" css:theme="#footer-js" />
+ -->
+
+    <!-- <copy css:content="#portlets-footer .portlet-static-twitter" css:theme=".footer .twitter" />-->
+    <!-- <strip css:content="#portlets-footer .portlet-static-contact" />
+    <strip css:content="#portlets-footer .FooterPortletManager6 .portlet-static-about" />
+    <strip css:content="#portlets-footer .portlet-static-social" />
+    <strip css:content="#portlets-footer .portlet-static-twitter" /> -->
 
 </rules>

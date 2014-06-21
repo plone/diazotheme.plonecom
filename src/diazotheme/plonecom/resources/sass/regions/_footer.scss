@@ -1,0 +1,12 @@
+// Footer portlets and things
+
+#footer {
+	dl.portlet dd.portletItem.odd, dl.portlet dd.portletItem.even {
+		border-bottom: 0px none;
+	}
+	#portlets-footer dl.portlet dd.portletItem a {
+		font-weight: normal;
+		padding-left: 0 !important;
+		line-height: 1em;
+	}
+}

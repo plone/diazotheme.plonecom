@@ -1,0 +1,30 @@
+// Portal content general styles
+
+#portal-content {
+	// background: #fff url("../img/old/portal_content.png") repeat-x scroll center top;
+}
+
+h1.documentFirstHeading {
+	font-size: 4.5em;
+	margin-bottom: 0;
+	line-height: 1.25em;
+}
+
+#content p.description, #content .documentDescription {
+	color: $text;
+	font-size: 1.67em;
+	line-height: 1.66666em;
+}
+
+
+
+// Structure
+
+.maincol {
+	width: 52.23880597%;	// 700/1340
+	float: left;
+}
+.rightcol {
+	width: 33.955223881%;	// 455/1340
+	float: right;
+}

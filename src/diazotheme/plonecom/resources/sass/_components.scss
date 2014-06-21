@@ -1,0 +1,18 @@
+// Components
+// Modular components and their states. 
+// These pieces should be able to be used anywhere. Things like: icons, buttons, messages, etc.
+
+@import 'components/carousel'; 
+
+
+// Link styles
+a:link, a:visited {
+	text-decoration: none;
+	color: $plone-blue;
+	font-weight: bold;
+}
+a:hover, a:active {
+	// border-bottom: 1px solid #ccc;
+}
+
+img {max-width: 100%; height: auto;}

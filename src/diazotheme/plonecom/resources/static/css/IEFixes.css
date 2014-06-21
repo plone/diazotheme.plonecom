@@ -1,0 +1,57 @@
+
+/* - IEFixes.css - */
+@media screen {
+/* http://plone.rebelx.nl/portal_css/IEFixes.css?original=1 */
+/* */
+*html ul#content-views{
+margin: -2px -3px 0px -3px;
+}
+/* */
+#portal-logo {
+margin-top: 0;
+}
+/* */
+.hiddenStructure {
+position: absolute;
+}
+/* */
+div.cell {
+float: none;
+*float: left;
+}
+/* */
+h2.tileHeadline {
+display: block;
+*display: inline;
+}
+/* */
+div.optionsBox {
+!width: 50%;
+}
+.optionsBox input {
+!margin: 0px;
+}
+/* */
+#portal-columns {
+z-index: 1;
+}
+/* */
+#portal-top {
+z-index: 2;
+}
+/* */
+#contentActionMenus #plone-contentmenu-workflow {
+z-index: 6;
+}
+}
+
+
+/* - ++theme++diazotheme.plone/stylesheets/iefixes.css - */
+@media screen {
+/* http://plone.rebelx.nl/portal_css/++theme++diazotheme.plone/stylesheets/iefixes.css?original=1 */
+#logo img {
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/logo.png');
+}
+
+}
+
