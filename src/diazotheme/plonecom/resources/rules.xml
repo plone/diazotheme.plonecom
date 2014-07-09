@@ -25,7 +25,14 @@
 
 
     <!-- Index -->
-    <replace css:content="#portal-column-content" css:theme=".diazo-index #portal-column-content" />
+    <replace css:content=".section-front-page #portal-column-content" css:theme=".diazo-index #portal-column-content" />
+    <replace css:content=".section-front-page #portal-column-one" css:theme=".diazo-index #portal-column-one" />
+    <replace css:content=".section-front-page #portal-column-two" css:theme=".diazo-index #portal-column-two" />
+    <replace css:content=".section-front-page #portlets-below" css:theme=".diazo-index #below-portal-content" />
+    <!-- <drop css:content=".section-front-page .BelowPortletManager1" attributes="class" /> -->
+    <drop css:content=".section-front-page #portal-column-content" attributes="class" />
+    <drop css:content=".section-front-page #portal-column-two" attributes="class" />
+
 
 <!--     <copy css:content="#portal-breadcrumbs" css:theme=".pathbar" />
  -->    <!-- <strip css:content="#portal-breadcrumbs" attribute="id" /> -->
@@ -57,8 +64,10 @@
 
     <copy css:content="#form-widgets-developer_name" css:theme=".developedby .bio h4" />
     <copy css:content="#form-widgets-developed_by" css:theme=".developedby .bio p" />
-    <copy css:content="#form-widgets-IAddress-address" css:theme=".developedby .contacts .address" />
-    <copy css:content="#form-widgets-INetContactInfo-email" css:theme=".developedby .contacts .email a" />
+    <!-- <copy css:content="#form-widgets-IAddress-address" css:theme=".developedby .contacts .address" /> -->
+    <!-- <copy css:content="#form-widgets-INetContactInfo-email" css:theme=".developedby .contacts .email a" /> -->
+
+    <copy css:content="#form-widgets-contact_info" css:theme=".developedby .contacts" />
 
 
     <!-- foooooter -->
